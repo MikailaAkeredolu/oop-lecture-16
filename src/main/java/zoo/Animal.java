@@ -3,6 +3,8 @@ package zoo;
 
 public abstract class Animal {
     //State
+    private int id;
+    private static int animalCount;
     private String name;
     private String food;
     private int age;  //access Modifier
@@ -17,6 +19,8 @@ public abstract class Animal {
     }
     //overload the constructor
     public Animal(String name, String food){
+        animalCount++;
+        id = animalCount;
         this.name = name;
         this.food = food;
     }
@@ -44,6 +48,20 @@ public abstract class Animal {
 
     public abstract void makeNoise();     //abstract method - signature - it has no body
 
+
+    //static method
+    public static void printUniqueAnimalMethod(Animal animal){
+
+        if(animal instanceof Dog){
+            ((Dog) animal).fetch();
+        }
+
+        if(animal instanceof Cat){
+            ((Cat) animal).scratch();
+        }
+
+    }
+
     public String getName() {
         return name;
     }
@@ -52,11 +70,19 @@ public abstract class Animal {
         return food;
     }
 
-    //String representation of an object
-    @Override
-     public String toString(){
-        return " -> Name:  " + this.name + " -> Food:  " + this.food ;
+    public int getId() {
+        return id;
+    }
 
-     }
+    public static int getAnimalCount() {
+        return animalCount;
+    }
+
+    //String representation of an object
+//    @Override
+//     public String toString(){
+//        return " -> Name:  " + this.name + " -> Food:  " + this.food ;
+//
+//     }
 
 }

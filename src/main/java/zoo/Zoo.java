@@ -1,30 +1,57 @@
 package zoo;
-
+//id, state, behavior
 public class Zoo {
 
     public static void main(String[] args) {
 
-        Cat cat = new Cat("Catty", "Milk");
-        cat.scratch();
+
+        Cat cat = new Cat("Catty", "Milk"); // created on the heap
+       // System.out.println(cat);
+        //cat.scratch();
         cat.setAge(4);
         //System.out.println(cat);
+        //System.out.println( cat.getId() );
+
+       // System.out.println("total animals created");
+
 
         Dog dog = new Dog("Bingo", "Bones");
-        dog.fetch();
+
+        Animal dogToCat = new Dog("Dog_ah_Cat", "noodles");  // upcasted
+//        dogToCat.eat();
+//        System.out.println(dogToCat instanceof Animal);
+
+        //((Dog)dogToCat).fetch(); //down casted
+
+
+        //System.out.println(dog);
+        //dog.fetch();
         dog.setAge(67);
         dog.sex = 'F';
+        //System.out.println( dog.getId() );
 
         Wolf wolf = new Wolf("Ralph", "Deer");
         //System.out.println(wolf);
+        //System.out.println( wolf.getId() );
 
         Tiger tiger = new Tiger("Jessy", "gators");
         //System.out.println(tiger);
+        //System.out.println( tiger.getId() );
 
-        Animal[] animals = {dog, cat, wolf, tiger};
+        //System.out.println(Animal.getAnimalCount());
+        //Animal.printUniqueAnimalMethod(cat);
+        RoboticDog roboticDog = new RoboticDog();
 
-        for(Animal animal : animals){
-            animal.makeNoise();
-        }
+        Animal[] animals = {dog, cat, wolf, tiger };
+
+
+        System.out.println("======================");
+
+        IPet[] pets = {roboticDog, dog, cat};
+        IPet.printPetGreetings(pets);
+
+
+
 
 
 

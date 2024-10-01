@@ -1,6 +1,6 @@
 package zoo;
 
-public class Cat extends Feline{
+public class Cat extends Feline implements IPet{
 
     public boolean hasNineLives;
 
@@ -22,8 +22,14 @@ public class Cat extends Feline{
         System.out.println("meow meow");
     }
 
+    //unique to cats
     public void scratch(){
 
         System.out.println("I scratch things");
+    }
+
+    @Override
+    public void greetOwner() {
+        System.out.println("lick face");
     }
 }
