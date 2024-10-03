@@ -1,6 +1,6 @@
 package zoo;
 
-public class Tiger extends Feline{
+public class Tiger extends Feline implements IPet, Endangered{
 
     public Tiger() {
     }
@@ -16,5 +16,15 @@ public class Tiger extends Feline{
     @Override
     public void makeNoise() {
         System.out.println("rooar in tiger style...36 chambers");
+    }
+
+    @Override
+    public void greetOwner() {
+        System.out.println("greets in tiger style");
+    }
+
+    @Override
+    public boolean isEndangered() {
+        return true;
     }
 }

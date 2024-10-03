@@ -1,6 +1,6 @@
 package zoo;
 //A dog is-A animal
-public class Dog extends Canine implements IPet {
+public class Dog extends Canine implements HouseHoldPet {
 
     public Dog() {
     }
@@ -21,6 +21,11 @@ public class Dog extends Canine implements IPet {
     //unique to dogs
     public void fetch(){
         System.out.println("fetch a toy ball like a " + sex);
+    }
+
+    @Override
+    public void play() {
+        System.out.println("playing");
     }
 
     @Override
