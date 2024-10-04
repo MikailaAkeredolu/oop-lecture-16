@@ -4,6 +4,25 @@ import java.util.ArrayList;
 
 public class ShopAppUtility  {
 
+
+    public static boolean isAFit(Person person, ClothingItem clothingItem){
+
+        //if the person's size is equal to the size of the clothing item return tru else return false
+
+
+        return false;
+    }
+
+
+
+
+
+
+
+
+
+
+
   public static double calculateSubTotal(ClothingItem[] clothingItems){
                 //set current total to zero
                 double currentTotal = 0;
