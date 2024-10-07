@@ -18,7 +18,8 @@ public class Zoo {
         Dog dog = new Dog("Bingo", "Bones");
 
         Animal dogToCat = new Dog("Dog_ah_Cat", "noodles");  // upcasted
-//        dogToCat.eat();
+        dogToCat = cat;
+       dogToCat.eat();
 //        System.out.println(dogToCat instanceof Animal);
 
         //((Dog)dogToCat).fetch(); //down casted
