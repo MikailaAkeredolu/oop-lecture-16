@@ -54,7 +54,7 @@ public class UtilityMethods {
 
         if(customer instanceof Student){
 
-            System.out.println( customer.getClass().getSimpleName() + " qualifies for  a discount of  %.2d" + ((Student) customer).getDISCOUNT() * 100 + "%");
+            System.out.println( customer.getClass().getSimpleName() + " qualifies for  a discount of " + ((Student) customer).getDISCOUNT() * 100 + "%");
         }
 
 
