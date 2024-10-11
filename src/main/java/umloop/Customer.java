@@ -10,4 +10,8 @@ public abstract class Customer extends Person {
     }
 
     public abstract double printPriceAfterDiscount(Cloth cloth);
+
+    public Cloth[] getClothingItems() {
+        return clothingItems;
+    }
 }

@@ -16,13 +16,23 @@ public class Business implements Payable{
 
     @Override
     public boolean payTaxOnEarnings() {
-        return false;
+        //check if a manger makes over $100k
+        //return calculatePay() > 100000.0;
+
+        if(calculatePay() > 100000.0){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     @Override
     public double calculatePay() {
-        return 0;
+        return  this.productPrice * productQtySupplied;
     }
+
+
 
     public String getName() {
         return name;

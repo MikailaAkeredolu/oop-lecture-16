@@ -30,6 +30,10 @@ public class Student extends Customer {
 
     @Override
     public void printInfo() {
+        System.out.println("Student ID :" + studentID + "Student Name: " + getName());
+    }
 
+    public double getDISCOUNT() {
+        return DISCOUNT;
     }
 }

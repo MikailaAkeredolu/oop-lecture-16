@@ -10,6 +10,13 @@ public class HourlyEmployee extends Employee{
         super(name, size, clothingItems);
     }
 
+    //overloaded
+    public HourlyEmployee(String name, Size size, Cloth[] clothingItems, double hourlyWage, float hoursWorked) {
+        super(name, size, clothingItems);
+        this.hourlyWage = hourlyWage;
+        this.hoursWorked = hoursWorked;
+    }
+
     @Override
     public double printPriceAfterDiscount(Cloth cloth) {
         //we need a way to get the price of the cloth we are trying to buy
@@ -36,5 +43,27 @@ public class HourlyEmployee extends Employee{
     @Override
     public boolean payTaxOnEarnings() {
         return false;
+    }
+
+    public double getHourlyWage() {
+        return hourlyWage;
+    }
+
+    public void setHourlyWage(double hourlyWage) {
+        this.hourlyWage = hourlyWage;
+    }
+
+    public float getHoursWorked() {
+
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(float hoursWorked) {
+        if(hoursWorked > 0){
+            this.hoursWorked = hoursWorked;
+        }else{
+            System.out.println("hoursWorked cannot be a negative number");
+        }
+
     }
 }

@@ -32,7 +32,11 @@ public class Manager extends Employee {
 
     @Override
     public void printInfo() {
+        System.out.print(this.getName() + " makes " + salary + " and his shopping bag consist of the following clothing items: ");
+        for(Cloth cloth: getClothingItems() ){
+            System.out.print(cloth.getName() + " ");
 
+        }
     }
 
     public double getSalary() {

@@ -6,6 +6,7 @@ public class Cloth {
     private double price;
     private Size size;
 
+
     public Cloth(String name, double price, Size size) {
         this.name = name;
         this.price = price;
@@ -35,4 +36,6 @@ public class Cloth {
     public void setSize(Size size) {
         this.size = size;
     }
+
+
 }

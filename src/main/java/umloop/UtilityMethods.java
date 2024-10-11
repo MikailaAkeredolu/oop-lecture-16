@@ -2,6 +2,7 @@ package umloop;
 
 public class UtilityMethods {
 
+
     public static boolean checkFitting(Customer customer, Cloth clothingItem){
         if(customer.getSize() == clothingItem.getSize()){
             return true;
@@ -12,8 +13,18 @@ public class UtilityMethods {
     }
 
     public static double calculateSubTotal(Cloth[] clothingItems){
-        //Todo - figure out how to calculate the total price of all clothing items given to you
-        return 0.0;
+        //a container that represesnt our subtotal , intitialize it to zerop to start with
+        double currentSubTotal = 0.0;
+        //loop through the clothings items
+        for(int x = 0; x < clothingItems.length; x++ ){
+          currentSubTotal   = currentSubTotal + clothingItems[x].getPrice();
+        }
+          // i want grab each clothing item's price
+        //add the price of each item to the currentSubtotal
+        //return current subttotal
+
+
+        return currentSubTotal;
     }
 
     public static void printClassNamesOfPayableEntities(Payable[] anArrayOfPayableEntities){
@@ -27,8 +38,28 @@ public class UtilityMethods {
 
     }
 
+    //Polymorphic - polymorphism
     public  static void checkCustomerDiscount(Customer customer){
-        //todo
+
+        //check type of customer
+        if(customer instanceof HourlyEmployee){
+            System.out.println( customer.getClass().getSimpleName() + " qualifies for  a discount of " + ((HourlyEmployee) customer).DISCOUNT * 100 + "%" );
+        }
+
+        if(customer instanceof Manager){
+            double managerDiscount = ((Manager) customer).getManagerDiscount() * 100;
+            String result = String.format("%.2f", managerDiscount);
+            System.out.println( customer.getClass().getSimpleName() + " qualifies for  a discount of " +  result + "%");
+        }
+
+        if(customer instanceof Student){
+
+            System.out.println( customer.getClass().getSimpleName() + " qualifies for  a discount of  %.2d" + ((Student) customer).getDISCOUNT() * 100 + "%");
+        }
+
+
+
+
     }
 
 
