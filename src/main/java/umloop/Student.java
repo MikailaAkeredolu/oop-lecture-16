@@ -13,10 +13,12 @@ public class Student extends Customer {
         this.studentID = studentCounter;
     }
 
+    //static method
     public static void printStudentCounter() {
         System.out.println( studentCounter);
     }
 
+    //concrete method
     @Override
     public double printPriceAfterDiscount(Cloth cloth) {
         //we need a way to get the price of the cloth we are trying to buy

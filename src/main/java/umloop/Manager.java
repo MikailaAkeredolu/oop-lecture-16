@@ -56,8 +56,8 @@ public class Manager extends Employee {
         return DISCOUNT + EXTRA_DISCOUNT;
     }
 
-    public void somethingnewfoooool(){
-
+    public void managerDiscount(){
+        System.out.println( getName() + " is a manager therefore is entitled to a discount of " + String.format( "%.0f" , getManagerDiscount() * 100 ) + "%" );
     }
 
     @Override
@@ -68,5 +68,10 @@ public class Manager extends Employee {
     @Override
     public boolean payTaxOnEarnings() {
         return false;
+    }
+
+    @Override
+    public boolean canGetFired() {
+        return true;
     }
 }

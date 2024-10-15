@@ -57,9 +57,6 @@ public class UtilityMethods {
             System.out.println( customer.getClass().getSimpleName() + " qualifies for  a discount of " + ((Student) customer).getDISCOUNT() * 100 + "%");
         }
 
-
-
-
     }
 
 

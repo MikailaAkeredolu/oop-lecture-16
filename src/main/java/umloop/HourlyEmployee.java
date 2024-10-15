@@ -5,6 +5,7 @@ public class HourlyEmployee extends Employee{
     private double hourlyWage;
     private float hoursWorked;
 
+    // this()
 
     public HourlyEmployee(String name, Size size, Cloth[] clothingItems) {
         super(name, size, clothingItems);
@@ -65,5 +66,10 @@ public class HourlyEmployee extends Employee{
             System.out.println("hoursWorked cannot be a negative number");
         }
 
+    }
+
+    @Override
+    public boolean canGetFired() {
+        return true;
     }
 }

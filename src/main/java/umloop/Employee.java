@@ -1,6 +1,6 @@
 package umloop;
 //Is -A
-public abstract class Employee extends Customer implements Payable{
+public abstract class Employee extends Customer implements Payable, TerminateAble{
 
     protected final double DISCOUNT = .10;
 
